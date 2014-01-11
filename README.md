@@ -1,4 +1,4 @@
 Yuemu
 =====
 
-Multimedia social network implemented in Python with Django
+Multimedia social network implemented in Java with JPA
