@@ -1,0 +1,4 @@
+1. 各类资源的访问量, 有类型的. 
+	
+	select count(r), r.type from Resource 
+	group by r.type

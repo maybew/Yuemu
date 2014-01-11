@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<persistence-unit name="openjpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<class>yuemu.po.Account</class>
+		<class>yuemu.po.Browse</class>
+		<class>yuemu.po.Music</class>
+		<class>yuemu.po.Video</class>
+		<class>yuemu.po.Image</class>
+		<class>yuemu.po.Document</class>
+		<class>yuemu.po.Download</class>
+		<class>yuemu.po.Resource</class>
+		<class>yuemu.po.Log</class>
+
+		<properties>
+			<property name="openjpa.ConnectionURL" value="jdbc:jtds:sqlserver://localhost:1433/yuemu" />
+			<property name="openjpa.ConnectionDriverName" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="openjpa.ConnectionUserName" value="sa" />
+			<property name="openjpa.ConnectionPassword" value="" />
+			<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="hibernate" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url"
+				value="jdbc:jtds:sqlserver://localhost:1433/yuemu" />
+				
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.format_sql" value="true" /> -->
+			<property name="hibernate.use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="createdrop" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url"
+				value="jdbc:jtds:sqlserver://localhost:1433/yuemu" />
+				
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.format_sql" value="true" /> -->
+			<property name="hibernate.use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> -->
+			<property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url"
+				value="jdbc:jtds:sqlserver://localhost:1433/yuemu" />
+				
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.format_sql" value="true" /> -->
+			<property name="hibernate.use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,164 @@
+.content {
+	min-height: 600px;
+}
+
+.content  a {
+	color: #002599;
+}
+
+.content .title {
+	color: #005179;
+	font-size: 32px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
+.content h2 {
+	border-top: 1px solid #8994F5;
+	background-color: #E5ECF9;
+	padding-left: 6px;
+	font-size: 13px;
+	magin: 0px;
+	height: 25px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000;
+}
+
+.content .sumary {
+	list-style: none;
+	margin-bottom: 30px;
+}
+
+.pager {
+	margin-top: 20px;
+	float: right;
+}
+
+.pager a {
+	display: inline-block;
+	padding: 2px 7px 2px 7px;
+	margin-left: 5px;
+	line-height: 17px;
+	background-color: #3366ff;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.pager .current {
+	background-color: #ac72e0;
+	color: white;
+}
+
+.pager a:hover {
+	background-color: #ac72e0;
+	color: white;
+}
+
+.table1 {
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.table1 caption {
+	padding-bottom: 8px;
+	font: italic 12px Arial, Verdana, Tahoma, Helvetica;
+	text-align: right;
+}
+
+.table1 th {
+	font-size: 13px;
+	font-weight: 400;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	padding: 6px;
+}
+
+.table1 td {
+	background: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+	padding: 3px;
+}
+
+.table2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.table2 th {
+	font-size: 13px;
+	font-weight: 400;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+	padding: 8px;
+}
+
+.table2 td {
+	background: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+	padding: 8px;
+}
+
+.table2 td a:hover {
+	cursor: pointer;
+}
+
+.table2 tr:hover td {
+	background: #d0dafd;
+	color: #339;
+}
+
+.table2 td a {
+	color: #2D489E;
+	padding-right: 10px;
+}
+
+.table3 {
+	border: #b9c9fe 1px solid;
+}
+
+.table3 th {
+	font-size: 14px;
+	font-weight: 400;
+	color: #039;
+	padding: 10px 8px;
+	background: #b9c9fe;
+}
+
+.table3 td {
+	color: #669;
+	padding: 8px;
+}
+
+.table3 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 640px;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.table3 .even {
+	background: #e8edff;
+}
+
+.table3 td a {
+	padding-right: 10px;
+}
+
+.table3 td a:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,30 @@
+1. 获取最新的10个资源:
+	url: /feed
+	参数: 
+	1. type: 值为[all, document, image, music, video]
+	return:
+	{
+		status: 
+		message: 
+		data: {
+			{}, {}, {}
+		}
+	}
+	即返回资源数组. 
+	
+2. 搜搜:
+	url: /search
+	参数: 
+	1. title: 只搜标题
+	或
+	1. tag: 只搜tag
+	或
+	1. keyword: 搜索标题+tag
+	
+	2. type: [all, document, image, music, video] 默认为all, 不区分大小写
+	
+	3. pageNum
+	
+	4. pageSize = 8
+	
+	return: 同上, 返回资源数组. 

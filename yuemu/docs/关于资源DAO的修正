@@ -1,0 +1,38 @@
+1. 资源添加三种状态(ResourceStatus): 
+	1. USING, 使用中 
+	2. CHECKING, 审核中
+	3. UNUSED, 不可用
+	
+2. 对于资源DAO行为的说明: 
+	基本操作:
+	1. INSERT: 注解为@Deprecated. 
+		不应该单独插入一个Resource, 而是在插入一个具体资源时级联添加之. 
+	2. DELETE: 不是删除实际的数据, 而是将其status置为UNSED
+	3. FIND: 这个可以用, 返回一个Resource, 而不是具体的资源. 
+	4. UPDATE: 这个可以用, 但只改变Resource的信息, 不涉及具体资源. 
+	
+	搜索和统计:
+	因为搜索和统计都是和用户相关的, 所以只处理状态为USING的资源. 
+	
+	添加若干个状态相关的查询和修改. 此DAO管理员需要. 
+	另外, 所有的管理功能都能在manageDAO包中看到. 
+
+3. 下面分别对Resource和Document(其他类型类似)的基本操作的说明. 
+	Resource: 
+	1. 增: 不支持. 一般指支持InsertDocument. 
+	2. 删: 支持. 其状态置为UNSED. 
+	3. 查: 支持, 返回Resource. 
+	4. 改: 支持, 只涉及Resource部分. 
+	
+	Document:
+	1. 增: 支持. 插入时顺便插入Resource表. 
+	2. 删: 不支持, 直接使用ResourceDAO的删除方法即可. 
+	3. 查: 支持, 返回Document. 
+	4. 改: 支持, 如果修改关联的Resource, 会反映到Resource表. 
+	
+4. Resource和Document的级联说明(非数据库人员不用看): 
+	DETACH: 不用, 因为用不上这个方法
+	MERGE:  果断
+	PERSIST:加上, 实际上也没用这个方法
+	REFRESH:不用, 因为用不上这个方法 
+	REMOVE: 加上, 本项目中没用此方法

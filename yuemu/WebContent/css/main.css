@@ -1,0 +1,172 @@
+/* general */
+html {
+	position: relative;
+	height: 100%;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	color: #444;
+	overflow-y: scroll;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	background: url(../images/background.png) repeat;
+	min-width: 980px;
+	min-height: 100%;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,li,ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+.wrap {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* header */
+#header {
+	height: 100px;
+	background: #069;
+}
+
+#header #logo {
+	width: 240px;
+	height: 80px;
+	background: #999;
+	float: left;
+	margin-top: 10px;
+	background: url(../images/logo.png);
+}
+
+#header #logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#header #link {
+	width: 600px;
+	float: right;
+	text-align: right;
+	padding-top: 35px;
+}
+
+#header #link a {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	margin-left: 12px;
+	background: #005179;
+	background: rgba(1, 1, 1, 0.2);
+	color: #ccc;
+	font-size: 14px;
+	text-align: center;
+	line-height: 34px;
+}
+
+#header #link a:hover {
+	background: #003c5b;
+	background: rgba(1, 1, 1, 0.5);
+	color: #fff;
+}
+
+#header #link a.expanded {
+	background: #fff;
+	color: #333;
+}
+
+#header #link a .toggle_icon {
+	width: 16px;
+	height: 16px;
+	background: url(../images/toggle.png);
+	display: inline-block;
+	margin-bottom: -3px;
+	margin-left: 5px;
+}
+
+#header #link a .submenu {
+	position: absolute;
+	display: none;
+	width: 150px;
+	right: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	box-shadow: 2px 3px 0 rgba(94, 94, 94, 0.1);
+}
+
+#header #link a .padding {
+	display: none;
+	height: 5px;
+	background: #fff;
+}
+
+#header #link a .submenu {
+	position: absolute;
+	display: none;
+	width: 150px;
+	right: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	box-shadow: 2px 3px 0 rgba(94, 94, 94, 0.1);
+	z-index: 666;
+}
+
+#header #link a .submenu_bg {
+	border: 1px solid #eee;
+	padding: 8px 0px;
+	color: #36C;
+	background: #fff;
+}
+
+#header #link a .submenu_bg,#header #link a .submenu_bg span {
+	display: block;
+}
+
+#header #link a .submenu_bg span.sep {
+	height: 1px;
+	border-top: 1px solid #dadada;
+	margin: 5px 0;
+}
+
+#header #link a .submenu_bg span:hover {
+	background: #e8e8e8;
+}
+
+#main {
+	margin-top: 30px;
+	min-height: 600px;
+}
+
+#footer {
+	margin-top: 50px;
+}
+
+#footer .wrap {
+	text-align: center;
+	padding: 15px 0;
+	color: #777;
+}
